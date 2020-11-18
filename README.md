@@ -1,14 +1,8 @@
 # DAsHA
 
-My code for constructing a Fantasy Football draft assistance algorithm using Gaussian Kernel Density Estimation (Gaussian KDE). "DAsHA" Stands for Draft Assistance Heuristic Algorithm. All the coding is done in Jupyter notebooks, and all raw data was pulled from public sources and is included as .xlsx files in the `/raw_data` directory in this repository.  The prepared data is stored in a `.csv` file and is in the `/prepared_data` directory.
+The source for constructing a Fantasy Football draft assistance algorithm using Gaussian Kernel Density Estimation (Gaussian KDE) Parts [1](https://dylanamartin.com/2020/11/13/building-a-fantasy-football-draft-assistance-algorithm-part-1.html) and [2](TBD). "DAsHA" Stands for Draft Assistance Heuristic Algorithm.
 
-The first notebook, "DAsHA_data_prep", cleans and merges the fantasy football projections (which were pulled 8/21/2020) and generates the Gaussian KDE for each player. These KDEs center a normal Gaussian distribution over each input point, and then sum all of those functions to generate a non-parametric probability density function; below is a plot of that function:
-
-![KDE Demo](https://github.com/dmarticus/DASHA/blob/master/img/KDE_demo.PNG)
-
-This distribution is then used to generate median point estimations and confidence intervals for each player. For example, the distribution above generates the following CI for the 125th-ranked player:
-
-![CI Demo](https://github.com/dmarticus/DASHA/blob/master/img/CI_demo.PNG)
+See [this blog post](https://dylanamartin.com/2020/11/13/building-a-fantasy-football-draft-assistance-algorithm-part-1.html) for an in-depth explanation of how first Jupyter Notebook (DAsHA_data_prep) works.
 
 The second notebook, "DAsHA_user_interface" provides a user-interface that you can use during a fantasy football draft to optimize your draft choices.
 
